@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block body %}
+<div class=" row  p-2 text-bg-primary">
+{% for lists in list %}
+
+<div class="col">
+
+<div class="card" style="width: 18rem;">
+  <div class="card" style="width: 18rem;">
+
+  <div class="card-header">
+      <p><b>Destination:</b></p>{{ lists.title }}
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><p><b>SeatNo:</b></p>{{ lists.flightNo}}</li>
+    <li class="list-group-item"><p><b>DepartureTime:</b></p>{{ lists.departureTime}}</li>
+    <li class="list-group-item"><p><b>TravellingTime:</b></p>{{ lists.timeTaken}}</li>
+  </ul>
+
+</div>
+   <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="{% url 'destiny:form' %}" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+</div>
+{% endfor %}
+
+</div>
+{% endblock %}
