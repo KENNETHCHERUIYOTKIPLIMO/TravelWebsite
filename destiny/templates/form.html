@@ -2,25 +2,45 @@
 
 
 
-{% extends 'layout.html' %}
+{% extends 'plan1.html' %}
 {% load static %}
 {% block body %}
 
-     <div id="booking" >
-            <div class="container">
-                <div class="section-header">
-                    <h2>Room Booking</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi libero. Quisque convallis, enim at venenatis tincidunt.
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="booking-form">
-                            <div id="success"></div>
-                            <form name="sentMessage" id="bookingForm" method="post" novalidate="novalidate">
-                                {% csrf_token %}
-                                {{ form.as_p }}
+<center>
+
+<h1>Book Now your flight</h1>
+  <br>
+<br>
+    {% if submitted %}
+      SUCCESSFULLY BOOKING!!!
+
+    {% else %}
+<div class="cal-md-6 d-flex justify-content-center">
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input  type="submit" value="Book" class="btn btn-outline-primary mt-2">
+</form>
+        </div>
+{% endif %}
+</center>
+
+
+{#     <div id="booking" >#}
+{#            <div class="container">#}
+{#                <div class="section-header">#}
+{#                    <h2>Flight Booking</h2>#}
+{#                    <p>#}
+{#                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi libero. Quisque convallis, enim at venenatis tincidunt.#}
+{#                    </p>#}
+{#                </div>#}
+{#                <div class="row">#}
+{#                    <div class="col-12">#}
+{#                        <div class="booking-form">#}
+{#                            <div id="success"></div>#}
+{#                            <form name="sentMessage" id="bookingForm" method="post" novalidate="novalidate">#}
+{#                                {% csrf_token %}#}
+{#                                {{ form.as_p }}#}
 {#                                <div class="form-row">#}
 {#                                    <div class="control-group col-sm-6">#}
 {#                                        <label>First Name</label>#}
@@ -98,13 +118,13 @@
 {#                                    <input type="text" class="form-control" id="request" placeholder="E.g. Special Request" required="required" data-validation-required-message="Please enter your special request" />#}
 {#                                    <p class="help-block text-danger"></p>#}
 {#                                </div>#}
-                                <div class="button"><button type="submit" id="bookingButton">Book Now</button></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+{#                                <div class="button"><button type="submit" id="bookingButton">Book Now</button></div>#}
+{#                            </form>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
         <!-- Booking Section End -->
 {% endblock %}
 

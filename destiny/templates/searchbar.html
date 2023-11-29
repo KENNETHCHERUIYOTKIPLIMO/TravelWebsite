@@ -1,7 +1,10 @@
-{% extends 'layout.html' %}
+{% extends 'plan1.html' %}
 {% load static %}
 {% block body %}
-    <div class=" row  p-2 text-bg-primary">
+    {% if list %}
+
+
+<div class=" row  p-2 text-bg-primary">
 {% for lists in list %}
 
 <div class="col">
@@ -27,9 +30,10 @@
 </div>
 
 </div>
+
 {% endfor %}
-
+ {% else %}
+    <p class="text-info h3">No Such Results!!!</p>
 </div>
-
-
+    {% endif %}
 {% endblock %}

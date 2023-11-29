@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block destination %}
+    <div class=""><a href="/" id="" class="btn btn-danger mb-3">Destinations</a></div>
+    <form action="" method="post">
+       {% csrf_token %}
+        {{ form.as_p }}
+    <button class="btn btn-success">Update</button>
+
+    <a href="/delete/{{ pop.id }}" class="btn btn-success">Delete</a>
+    </form>
+{% endblock %}

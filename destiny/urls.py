@@ -22,7 +22,11 @@ path('main/', views.main, name='main'),
     path('private/',views.private,name='private'),
     path('form/',views.form,name='form'),
     path('fligthlist/',views.flight_list,name='flight_list'),
-    path('popular/',views.popularContent,name='popularContent'),
-    path('booking/',views.Booking,name='Booking')
+    path('popular/',views.addDest,name='dest'),
+    path('booking/',views.Booking,name='Booking'),
+    path('edit/<str:pk>/',views.editDest,name='edit'),
+    path('delete/<str:pk>/',views.delete,name='delete'),
+    path('search/',views.search,name='search'),
+    path('explore/',views.explore,name='explore'),
 
 ]

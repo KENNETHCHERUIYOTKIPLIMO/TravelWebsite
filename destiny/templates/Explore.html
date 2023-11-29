@@ -1,0 +1,44 @@
+
+{% extends 'plan1.html' %}
+{% load static %}
+{% block body %}
+<div class="container mt-4">
+    <section>
+        <h2>Popular Destinations</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/home.jpg' %}" class="card-img-top" alt="Destination 1">
+                    <div class="card-body">
+                        <h5 class="card-title">USA</h5>
+                        <p class="card-text">Explore the beauty of the Museum USA.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more destination cards as needed -->
+        </div>
+    </section>
+
+    <section class="mt-4">
+        <h2>Featured Tours</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="{% static 'images/home.jpg' %}" class="card-img-top" alt="Tour 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Kenya</h5>
+                        <p class="card-text">Experience the adventure of Black beauty human being in Kenya.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more tour cards as needed -->
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-4">
+    <p>&copy; 2023 TravelSite. All rights reserved.</p>
+</footer>
+
+{% endblock %}
